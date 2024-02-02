@@ -1,12 +1,11 @@
-// import { useState } from 'react'
-import './App.css'
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import Greeting from '../src/components/Greeting';
 
-function App() {
-  return (
-      <div>
-       <h1>Hello World</h1>
-    </div>
-  )
-}
+const App = () => (
+  <Provider store={store}>
+    <Greeting />
+  </Provider>
+);
 
-export default App
+export default App;
