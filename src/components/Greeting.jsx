@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchRandomMessage } from '../redux/actions';
@@ -62,4 +62,6 @@ const mapStateToProps = (state) => ({
   randomMessage: state.randomMessage,
 });
 
-export default connect(mapStateToProps, { fetchRandomMessage })(Greeting);
+const ConnectedGreeting = connect(mapStateToProps, { fetchRandomMessage })(Greeting);
+
+export default ConnectedGreeting;
